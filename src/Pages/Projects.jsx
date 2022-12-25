@@ -36,7 +36,15 @@ const data = [
                   tech:"HTML,CSS,JAVASCRIPT,REACT,CHAKRA UI",
                   github:"https://github.com/fahisayub/ideakart-clone",
                   deploy:"https://ideakart-clone-rct101.netlify.app/",
-             }
+             },
+             {
+              img:"https://boutique.humbleandrich.com/wp-content/uploads/2019/03/YOOX-2.jpg",
+              name:"YOOX-Clone",
+              discription:"This website is a clone of 'YOOX' & We name it as Exclusive and here i implemented some functionalities product sorting & filtering,add to cart etc.",
+              tech:"HTML,CSS,JAVASCRIPT,REACT,CHAKRA UI,MONGODB,EXPRESS,NODE,JWT",
+              github:"https://github.com/Hashal890/Exclusive-Yoox-Clone",
+              deploy:"https://yoox-clone-by-exclusive.vercel.app/",
+         },
   ]
 const Projects = () => {
   return (
