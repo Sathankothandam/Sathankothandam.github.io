@@ -1,6 +1,6 @@
 import { Button, Link } from '@chakra-ui/react'
 import React from 'react'
-import RESUME from "../assets/cv.pdf"
+import RESUME from "../assets/Sathan_Resume.pdf"
 import { FiDownload } from 'react-icons/fi';
 const Resume = () => {
   return (

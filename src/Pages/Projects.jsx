@@ -24,7 +24,7 @@ const data = [
               img:"https://camo.githubusercontent.com/0078f246639729005244b4605b2bb0622263c5bd176af79f5f14b8236e08d45f/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f3730302f312a72756947714d7546766344535f6237797763685257672e6a706567",
               name:"Beauty bebo-Clone",
               discription:"This website is a clone of 'Beauty bebo' & here i implemented some functionalities product sorting & filtering,add to cart etc.  ",
-              tech:"HTML,CSS,JAVASCRIPT,React,Chakra UI",
+              tech:"HTML,CSS,JAVASCRIPT,REACT,CHAKRA UI",
               linked:"",
               deploy:"https://beautybebo7.netlify.app/",
               github:"https://github.com/Sathankothandam/BeautyBebo-Clone"
@@ -33,7 +33,7 @@ const data = [
                   img:"https://camo.githubusercontent.com/e4d7c4c10b3f7574cc67f289d46d368463e239b505c573556eaf1d45c310e35c/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f313430302f312a6e5f44563156533641703464796730556856783755412e706e67",
                   name:"Ideakart-Clone",
                   discription:"This website is a clone of 'Idea Kart' & here i implemented some functionalities product sorting & filtering,add to cart etc.  ",
-                  tech:"HTML,CSS,JAVASCRIPT,React,Chakra UI",
+                  tech:"HTML,CSS,JAVASCRIPT,REACT,CHAKRA UI",
                   github:"https://github.com/fahisayub/ideakart-clone",
                   deploy:"https://ideakart-clone-rct101.netlify.app/",
              }
@@ -67,7 +67,7 @@ const Projects = () => {
                          </Box>
                          <Box >
                             <Text fontSize={{base:"xs",sm:"md",md:"lg"}} fontWeight={"bold"} color={"#319795"}>TECH STACK</Text>
-                            <Text>{data.tech}</Text>
+                            <Text fontWeight={"bold"}>{data.tech}</Text>
                          </Box>
                          <Flex color={"white"} justifyContent={"space-evenly"}>
                            <Link href={data.github}>
