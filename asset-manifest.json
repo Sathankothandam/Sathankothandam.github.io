@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.6a3b6a23.js",
+    "main.js": "/static/js/main.f4660698.js",
     "static/js/787.3bff3d6c.chunk.js": "/static/js/787.3bff3d6c.chunk.js",
     "static/media/react.png": "/static/media/react.fb59dfc6bb1bac6b0ad0.png",
     "static/media/redux.png": "/static/media/redux.1b4bb5fceb01b19da59d.png",
-    "static/media/sathport.png": "/static/media/sathport.e5fb714696e2d285478b.png",
     "static/media/Sathan_Resume.pdf": "/static/media/Sathan_Resume.2b9a15b6b044bfc1712c.pdf",
     "static/media/html.png": "/static/media/html.1d7b133e22ffe4829da6.png",
     "static/media/git.png": "/static/media/git.be0b4d1cb30d098264cf.png",
     "static/media/boot.png": "/static/media/boot.f132cb791703420e69ca.png",
+    "static/media/sathport.jpg": "/static/media/sathport.9779dc68e033b78c1e34.jpg",
     "static/media/css.jpg": "/static/media/css.86ea90919c3f33faa467.jpg",
     "static/media/chakra.png": "/static/media/chakra.6679974bb2314d77fcab.png",
     "index.html": "/index.html",
     "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.6a3b6a23.js.map": "/static/js/main.6a3b6a23.js.map",
+    "main.f4660698.js.map": "/static/js/main.f4660698.js.map",
     "787.3bff3d6c.chunk.js.map": "/static/js/787.3bff3d6c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.6a3b6a23.js"
+    "static/js/main.f4660698.js"
   ]
 }
