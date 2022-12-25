@@ -1,6 +1,6 @@
 import { Box, Image, Text, Flex,} from "@chakra-ui/react";
 import React from "react";
-import Picture from "../assets/sathport.png";
+import Picture from "../assets/sathport.jpg";
 import Resume from "../Components/Resume";
 const Home = () => {
   return (
