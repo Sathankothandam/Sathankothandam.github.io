@@ -18,8 +18,9 @@ import {
     VStack,
   } from '@chakra-ui/react';
   import React from 'react';
-  import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from 'react-icons/bs';
+  import { BsGithub, BsLinkedin, BsPerson, BsTwitter,} from 'react-icons/bs';
   import { MdEmail, MdOutlineEmail } from 'react-icons/md';
+import Call from '../Components/Call';
 
   const confetti = {
     light: {
@@ -89,7 +90,7 @@ const Contact = () => {
                   isRound
                 />
               </Tooltip>
-
+               <Call/>
               <Link href="https://github.com/Sathankothandam">
                 <IconButton
                   color={"#319795"}
