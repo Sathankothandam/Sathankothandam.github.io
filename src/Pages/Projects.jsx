@@ -26,7 +26,7 @@ const data = [
               discription:"This website is a clone of 'Beauty bebo' & here i implemented some functionalities product sorting & filtering,add to cart etc.  ",
               tech:"HTML,CSS,JAVASCRIPT,REACT,CHAKRA UI",
               linked:"",
-              deploy:"https://beautybebo7.netlify.app/",
+              deploy:"https://beauty-bebclone.netlify.app/",
               github:"https://github.com/Sathankothandam/BeautyBebo-Clone"
                 },
              {
