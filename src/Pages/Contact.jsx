@@ -106,22 +106,7 @@ const Contact = () => {
                   isRound
                 />
               </Link>
-
-              <Link href="https://twitter.com/SathanKothandam">
-                <IconButton
-                 color={"#319795"}
-                  aria-label="twitter"
-                  variant="ghost"
-                  size="lg"
-                  icon={<BsTwitter size="28px" />}
-                  _hover={{
-                    bg: 'blue.500',
-                    color: useColorModeValue('white', 'gray.700'),
-                  }}
-                  isRound
-                />
-              </Link>
-
+              
               <Link href="https://linkedin.com/in/sathan-kothandam">
                 <IconButton
                   color={"#319795"}
