@@ -28,7 +28,7 @@ const data = [
               linked:"",
               deploy:"https://beauty-bebclone.netlify.app/",
               github:"https://github.com/Sathankothandam/BeautyBebo-Clone"
-                },
+              },
              {
                   img:"https://camo.githubusercontent.com/e4d7c4c10b3f7574cc67f289d46d368463e239b505c573556eaf1d45c310e35c/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f313430302f312a6e5f44563156533641703464796730556856783755412e706e67",
                   name:"Ideakart-Clone",
@@ -81,7 +81,7 @@ const Projects = () => {
                            <Link href={data.github}>
                            <Button variant='solid' bg={"gray.900"}  size='md'><AiFillGithub/></Button>
                            </Link>
-                           <Link href={data.deploy}>
+                           <Link onClick={() => window.open(data.deploy)}>
                            <Button variant='solid' bg={"blue.500"} size='md'><GrDeploy/></Button>
                            </Link>
                          </Flex>
