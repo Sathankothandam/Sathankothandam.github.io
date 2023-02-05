@@ -18,13 +18,13 @@ const ContactButton = () => {
     fontSize={"2rem"}
     color = "#319795"
     >
-         <Link href='https://github.com/Sathankothandam'>
+         <Link onClick={() => window.open('https://github.com/Sathankothandam')}>
             <AiFillGithub/>
          </Link>
-         <Link href='https://www.linkedin.com/in/sathan-kothandam/'>
+         <Link onClick={() => window.open('https://www.linkedin.com/in/sathan-kothandam/')}>
             <AiFillLinkedin/>
          </Link>
-         <Link href='https://gmail.com'>
+         <Link onClick={() => window.open('https://gmail.com')}>
             <AiOutlineMail/>
          </Link>
     </Box>

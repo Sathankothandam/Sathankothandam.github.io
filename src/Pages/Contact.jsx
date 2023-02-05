@@ -1,26 +1,24 @@
 import {
     Box,
-    Button,
     Flex,
-    FormControl,
-    FormLabel,
     Heading,
     IconButton,
     Input,
-    InputGroup,
-    InputLeftElement,
     Link,
     Stack,
     Textarea,
     Tooltip,
     useClipboard,
     useColorModeValue,
+    useToast,
     VStack,
   } from '@chakra-ui/react';
-  import React from 'react';
-  import { BsGithub, BsLinkedin, BsPerson, BsTwitter,} from 'react-icons/bs';
-  import { MdEmail, MdOutlineEmail } from 'react-icons/md';
+  import React, { useRef, useState } from 'react';
+  import emailjs from '@emailjs/browser';
+  import { BsGithub, BsLinkedin,} from 'react-icons/bs';
+  import { MdEmail,} from 'react-icons/md';
 import Call from '../Components/Call';
+import Whatsapp from '../Components/Whatsapp';
 
   const confetti = {
     light: {
@@ -38,6 +36,50 @@ const CONFETTI_DARK = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2
 
 const Contact = () => {
     const { hasCopied, onCopy } = useClipboard('sathankothandam@gmail.com');
+    const [formData, setFormData] = useState({
+      name: "",
+      email: "",
+      message: "",
+  });
+
+  const handleChange = (e)=>{
+    const {id, value} = e.target;
+    setFormData({
+        ...formData,
+        [id]:value
+    })
+    console.log(formData)
+}
+    const toast = useToast()
+    const form = useRef();
+
+    const sendEmail = (e) => {
+      e.preventDefault();
+        if(formData.name === "" || formData.email === "" || formData.message === ""){
+          toast({
+            title: 'Please enter the value in all inputs',
+            status: 'error',
+            duration: 9000,
+            isClosable: true,
+          })
+        }
+        else{
+          emailjs.sendForm('service_dar4arm', 'template_njk0j2k', form.current, 'f0WvNXC7Mebn1f2FN')
+          .then((result) => {
+              console.log(result.text);
+              toast({
+                title: 'Successfully sent',
+                description: "You message has been sent to sathan",
+                status: 'success',
+                duration: 9000,
+                isClosable: true,
+              })
+          },
+          (error) => {
+              console.log(error.text);
+          });
+        }
+    };
   return (
     <Flex
     className="contact-container"
@@ -91,7 +133,7 @@ const Contact = () => {
                 />
               </Tooltip>
                <Call/>
-              <Link href="https://github.com/Sathankothandam">
+              <Link onClick={() => window.open('https://github.com/Sathankothandam')}>
                 <IconButton
                   color={"#319795"}
                   aria-label="github"
@@ -107,7 +149,7 @@ const Contact = () => {
                 />
               </Link>
               
-              <Link href="https://linkedin.com/in/sathan-kothandam">
+              <Link onClick={() => window.open('https://www.linkedin.com/in/sathan-kothandam/')}>
                 <IconButton
                   color={"#319795"}
                   aria-label="linkedin"
@@ -121,6 +163,7 @@ const Contact = () => {
                   isRound
                 />
               </Link>
+              <Whatsapp/>
             </Stack>
 
             <Box
@@ -130,49 +173,28 @@ const Contact = () => {
               color={useColorModeValue('gray.700', 'whiteAlpha.900')}
               shadow="base">
               <VStack spacing={5}>
-                <FormControl isRequired>
-                  <FormLabel>Name</FormLabel>
-
-                  <InputGroup>
-                    <InputLeftElement children={<BsPerson />} />
-                    <Input type="text" name="name" placeholder="Your Name" />
-                  </InputGroup>
-                </FormControl>
-
-                <FormControl isRequired>
-                  <FormLabel>Email</FormLabel>
-
-                  <InputGroup>
-                    <InputLeftElement children={<MdOutlineEmail />} />
-                    <Input
-                      type="email"
-                      name="email"
-                      placeholder="Your Email"
-                    />
-                  </InputGroup>
-                </FormControl>
-
-                <FormControl isRequired>
-                  <FormLabel>Message</FormLabel>
-
-                  <Textarea
-                    name="message"
-                    placeholder="Your Message"
-                    rows={6}
-                    resize="none"
-                  />
-                </FormControl>
-
-                <Button
-                  colorScheme="blue"
-                  bg="#2d3748"
-                  color="white"
-                  _hover={{
-                    bg: 'blue.500',
-                  }}
-                  isFullWidth>
-                  Send Message
-                </Button>
+              <form ref={form} onSubmit={sendEmail}>
+                <Input type="text" name="from_name" placeholder='Name'
+                onChange={handleChange} 
+               value={formData.name}
+               id="name"/>
+                <Input type="email" name="email_id" mt={"10px"} placeholder="Email"
+                  onChange={handleChange} 
+                  value={formData.email}
+                  id="email"/>
+                <Textarea name="message" mt={"10px"} placeholder='Message'
+                  onChange={handleChange} 
+                  value={formData.message}
+                  id="message"/>
+                <Input type="submit"
+                 bg="#2d3748"
+                 color="white"
+                 _hover={{
+                   bg: 'blue.500',
+                 }}
+                 value="Send Message"
+                 mt={"10px"}/>
+              </form>
               </VStack>
             </Box>
           </Stack>

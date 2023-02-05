@@ -8,6 +8,7 @@ import {
   Stack,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { GiOakLeaf } from 'react-icons/gi';
 import { Link } from 'react-scroll';
 import Resume from './Resume';
  const Links = [
@@ -56,7 +57,9 @@ const Navbar = () => {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box fontSize={"lg"} color={"white"}>SK</Box>
+            <Box fontSize={"2xl"} color={"#319795"}>
+              <GiOakLeaf/>
+            </Box>
           </HStack>
           <Flex gap={"15px"}>
           <HStack
