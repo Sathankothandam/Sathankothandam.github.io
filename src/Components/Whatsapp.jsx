@@ -6,7 +6,7 @@ import { IconButton, useColorModeValue } from '@chakra-ui/react';
 const Whatsapp = () => {
   return (
    
-        <ReactWhatsapp number="7708615022" message="Hello Sathan!">
+        <ReactWhatsapp number="7708615022" message="Hello Sathan, How are you!!">
             <IconButton
                   color={"#319795"}
                   variant="ghost"
@@ -24,4 +24,4 @@ const Whatsapp = () => {
   )
 }
 
-export default Whatsapp
+export default Whatsapp;
