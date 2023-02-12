@@ -17,8 +17,9 @@ import {
   import emailjs from '@emailjs/browser';
   import { BsGithub, BsLinkedin,} from 'react-icons/bs';
   import { MdEmail,} from 'react-icons/md';
-import Call from '../Components/Call';
-import Whatsapp from '../Components/Whatsapp';
+  import Call from '../Components/Call';
+  import Whatsapp from '../Components/Whatsapp';
+  import { Zoom } from "react-reveal";
 
   const confetti = {
     light: {
@@ -105,7 +106,7 @@ const Contact = () => {
             }}>
             Get in Touch
           </Heading>
-
+            <Zoom duration={2000}>
           <Stack
             spacing={{ base: 4, md: 8, lg: 20 }}
             direction={{ base: 'column', md: 'row' }}>
@@ -198,6 +199,7 @@ const Contact = () => {
               </VStack>
             </Box>
           </Stack>
+          </Zoom>
         </VStack>
       </Box>
     </Box>

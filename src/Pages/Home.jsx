@@ -2,6 +2,7 @@ import { Box, Image, Text, Flex,} from "@chakra-ui/react";
 import React from "react";
 import Picture from "../assets/sathport.jpg";
 import Resume from "../Components/Resume";
+import { Zoom } from "react-reveal";
 const Home = () => {
   return (
     <Flex
@@ -23,13 +24,17 @@ const Home = () => {
         display={{ base: "block", sm: "block", md: "flex" }}
       >
         <Box textAlign={"center"} w={{ base: "100%", sm: "100%", md: "60%" }}>
+          <Zoom top duration={2000}>
           <Text fontSize={{base:"sm",sm:"sm",md:"lg"}} color={"gray.300"}>Hi, I'm Sathan Kumar</Text>
+          </Zoom>
+          <Zoom bottom duration={2000}>
           <Text
             fontSize={{ base: "24px", sm: "40px", md: "56px" }}
             color={"#319795"}
           >
             A Full Stack Web Developer
           </Text>
+          </Zoom>
           <Resume/>
         </Box>
         <Box

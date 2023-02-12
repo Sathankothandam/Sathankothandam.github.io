@@ -1,6 +1,6 @@
 import { Box, SimpleGrid,Image, Text } from '@chakra-ui/react'
 import React from 'react'
-
+import Zoom from 'react-reveal/Zoom';
 const GitStats = () => {
   return (
     <Box 
@@ -14,6 +14,7 @@ const GitStats = () => {
          color={'#f7fafc'}
         >
          GITHUB STATS</Text>
+         <Zoom duration={2000}>
          <SimpleGrid gap={"20px"} width={"80%"} m={"auto"} columns={{base:1, sm:1, md:2}}>
                <Box>
                 <Image src="https://github-readme-stats.vercel.app/api?username=sathankothandam&show_icons=true&locale=en"/>
@@ -22,6 +23,7 @@ const GitStats = () => {
                 <Image src='https://github-readme-streak-stats.herokuapp.com/?user=sathankothandam&%22%20alt=%22sathankothandam'/>
                </Box>
          </SimpleGrid>
+         </Zoom>
     </Box>
   )
 }

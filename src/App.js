@@ -1,8 +1,8 @@
 import ContactButton from "./Components/ContactButton";
+// import CubeBox from "./Components/CubeBox";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import ScrollTop from "./Components/ScrollTop";
-// import Whatsapp from "./Components/Whatsapp";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import GithubCalendar from "./Pages/GithubCalendar";
@@ -25,6 +25,7 @@ function App() {
        <GithubCalendar/>
        <Contact/>
        <Footer/>
+       {/* <CubeBox/> */}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { Box, Text } from '@chakra-ui/react'
 import React from 'react'
 import GitHubCalendar from "react-github-calendar";
+import { Zoom } from "react-reveal";
 // import GitStats from './GitStats';
 const GithubCalendar = () => {
 
@@ -16,9 +17,11 @@ const GithubCalendar = () => {
          color={"#2d3748"}
         >
          GITHUB CALENDAR</Text>
+         <Zoom duration={2000}>
         <Box w={"65%"} m={"auto"} mt={"30px"}>
         <GitHubCalendar username="Sathankothandam" hideColorLegend/>
         </Box>
+        </Zoom>
         {/* <GitStats/> */}
     </Box>
   )

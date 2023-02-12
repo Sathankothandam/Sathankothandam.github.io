@@ -1,5 +1,7 @@
 import { Box, Image, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 import React from "react";
+import { Zoom } from "react-reveal";
+// import CubeBox from "../Components/CubeBox";
 
 const About = () => {
   return (
@@ -17,11 +19,12 @@ const About = () => {
       >
         ABOUT ME
       </Text>
+      <Zoom duration={2000}>
       <Box
         mt={{ base: "50px", sm: "50px", md: "50px" }}
         w={"80%"}
         h="60%"
-        gap={"20px"}
+        // gap={"20px"}
         justifyContent={"center"}
         alignItems={"center"}
         display={{ base: "block", sm: "block", md: "flex" }}
@@ -35,6 +38,7 @@ const About = () => {
             m={"auto"}
             src="https://i.pinimg.com/originals/88/1f/02/881f020dbf5645b11d7fc8e73da2d06f.gif"
           />
+          {/* <CubeBox/> */}
         </Box>
         <Box
           color={"#2d3748"}
@@ -65,6 +69,7 @@ const About = () => {
           </UnorderedList>
         </Box>
       </Box>
+      </Zoom>
     </Box>
   );
 };

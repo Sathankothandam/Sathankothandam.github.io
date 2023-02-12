@@ -2,6 +2,7 @@ import { Box, Button, Flex, Heading, Image, Link, SimpleGrid, Stack, Text } from
 import { AiFillGithub } from 'react-icons/ai';
 import { GrDeploy } from 'react-icons/gr';
 import React from 'react'
+import { Zoom } from "react-reveal";
 const data = [
     {
         img:"https://www.smartsites.com/media/Overstock.com-in-2014.jpeg",
@@ -64,6 +65,7 @@ const Projects = () => {
            <SimpleGrid  gap={"30px"} w={"80%"} m={"auto"} mt={"30px"} columns={{base:1, sm: 1, md:2}}>
               {data.map((data)=>{
                 return(
+                     <Zoom duration={2000}>
                     <Stack boxShadow={"base"} bg={"white"} p={"15px"} w={"100%"}  key={data.name}>
                          <Box w={"100%"} h={{base:"auto", sm:"auto", md:"300px"}} >
                             <Image h={"100%"} src={data.img}/>
@@ -86,6 +88,7 @@ const Projects = () => {
                            </Link>
                          </Flex>
                     </Stack>
+                    </Zoom>
                 )
               })}
            </SimpleGrid>
